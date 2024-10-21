@@ -285,7 +285,6 @@ public class Controller implements ICANCEL, ICREATE, IREMOVE, ISTATUS, IUPDATE {
                     System.out.println("Magazine subscription not found.");
                 }
                 break;
-
             case 2:
                 Streaming streaming = database.searchStreaming(name);
                 if (streaming != null) {
@@ -294,7 +293,6 @@ public class Controller implements ICANCEL, ICREATE, IREMOVE, ISTATUS, IUPDATE {
                     System.out.println("Streaming subscription not found.");
                 }
                 break;
-
             case 3:
                 Freemium freemium = database.searchFreemium(name);
                 if (freemium != null) {
@@ -303,7 +301,6 @@ public class Controller implements ICANCEL, ICREATE, IREMOVE, ISTATUS, IUPDATE {
                     System.out.println("Freemium subscription not found.");
                 }
                 break;
-
             default:
                 System.out.println("Invalid subscription type provided.");
                 break;
