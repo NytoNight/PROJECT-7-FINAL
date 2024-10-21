@@ -102,7 +102,7 @@ public class Controller implements ICANCEL, ICREATE, IREMOVE, ISTATUS, IUPDATE {
                 break;
             case 2:
                 System.out.print("Enter new Device Limit: ");int deviceLimit = read.nextInt();
-                Streaming streaming = new Streaming(startDate, endDate, "Active", name, deviceLimit); // Placeholder for device plan
+                Streaming streaming = new Streaming(startDate, endDate, "Active", name, deviceLimit); 
                 database.updateStreaming(streaming, 0);
                 System.out.println("Updated the Streaming Subscription!!");
                 break;
@@ -142,7 +142,7 @@ public class Controller implements ICANCEL, ICREATE, IREMOVE, ISTATUS, IUPDATE {
                 System.out.println("Cancelled the Magazine Subscription!!");
                 break;
             case 2:
-                Streaming streaming = new Streaming("Cancelled", "Cancelled", "Cancelled", name, 0); // Placeholder for device plan
+                Streaming streaming = new Streaming("Cancelled", "Cancelled", "Cancelled", name, 0); 
                 database.updateStreaming(streaming, 0);
                 System.out.println("Cancelled the Streaming Subscription!!");
                 break;
