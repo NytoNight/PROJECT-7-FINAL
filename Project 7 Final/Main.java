@@ -18,10 +18,10 @@ public class Main {
             System.out.println("[2] Update an existing subscription");
             System.out.println("[3] Cancel a subscription");
             System.out.println("[4] View all subscriptions");
-            System.out.println("[5] Filter subscriptions");
+            System.out.println("[5] Filter a subscriptions");
             System.out.println("[6] Search for a subscription");
             System.out.println("[7] Remove a subscription");
-            System.out.println("[8] End the program");
+            System.out.println("[8] Exit the program");
             System.out.println("=========================================================================================================================================================");
             System.out.print("Enter your choice: ");
             try {
@@ -50,14 +50,14 @@ public class Main {
                         controller.remove();
                         break;
                     case 8:
-                        System.out.println("Closing System. Thank you for using the Subscription Management System!");
+                        System.out.println("Closing System.... Thank you for using the Subscription Management System! ");
                         read.close();
                         return;
                     default:
                         System.out.println("Invalid option. Please try again.");
                 }
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter a number.");
+            } catch (InputMismatchException error) {
+                System.out.println("Invalid Choice, Please Input one option from the Prompt");
                 read.next();
             }
         }
