@@ -15,7 +15,7 @@ public class DataBase {
         freemiums = new LinkedList<>();
     }
 
-    // Add methods
+    
     public void add_magazine(Magazine magazine) {
         magazines.add(magazine);
     }
@@ -28,7 +28,7 @@ public class DataBase {
         freemiums.add(freemium);
     }
 
-    // Update methods
+   
     public void updateMagazine(Magazine magazine, int index) {
         if (index >= 0 && index < magazines.size()) {
             magazines.set(index, magazine);
@@ -47,7 +47,7 @@ public class DataBase {
         }
     }
 
-    // Remove methods
+  
     public void removeMagazine(Magazine magazine) {
         magazines.remove(magazine);
     }
@@ -81,7 +81,7 @@ public class DataBase {
                 .orElse(null);
     }
 
-    // Filter methods
+  
     public List<Magazine> filterMagazines(String status) {
         return magazines.stream()
                 .filter(m -> m.getStatus().equalsIgnoreCase(status))
