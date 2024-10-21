@@ -15,7 +15,6 @@ public class DataBase {
         freemiums = new LinkedList<>();
     }
 
-    
     public void add_magazine(Magazine magazine) {
         magazines.add(magazine);
     }
@@ -28,7 +27,6 @@ public class DataBase {
         freemiums.add(freemium);
     }
 
-   
     public void updateMagazine(Magazine magazine, int index) {
         if (index >= 0 && index < magazines.size()) {
             magazines.set(index, magazine);
@@ -47,7 +45,6 @@ public class DataBase {
         }
     }
 
-  
     public void removeMagazine(Magazine magazine) {
         magazines.remove(magazine);
     }
@@ -67,7 +64,7 @@ public class DataBase {
                 .orElse(null);
     }
 
-    public Streaming searchStreaming(String name) {
+    public Streaming searchStreams(String name) {
         return streamings.stream()
                 .filter(s -> s.getName().equalsIgnoreCase(name))
                 .findFirst()
@@ -81,7 +78,7 @@ public class DataBase {
                 .orElse(null);
     }
 
-  
+    // Filter methods
     public List<Magazine> filterMagazines(String status) {
         return magazines.stream()
                 .filter(m -> m.getStatus().equalsIgnoreCase(status))
@@ -94,7 +91,7 @@ public class DataBase {
                 .collect(Collectors.toList());
     }
 
-    public List<Streaming> filterStreaming(String status) {
+    public List<Streaming> filterStreams(String status) {
         return streamings.stream()
                 .filter(s -> s.getStatus().equalsIgnoreCase(status))
                 .collect(Collectors.toList());
